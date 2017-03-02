@@ -1,0 +1,26 @@
+<ion-view cache-view="false">
+    <ion-header-bar class="bar-positive">
+        <button class="button icon ion-arrow-left-c button-clear" ng-click="goBack()"></button>
+        <h1 class="title">Pedidos</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header has-footer padding">
+
+        <div class="list card">
+            <div class="item item-image logo-gradiente">
+                <img src="../img/logo_xinguara.png">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-75"><b>Data Pedido</b></div>
+            <div class="col"><b>Situação</b></div>
+        </div>
+        <div class="row" ng-repeat="pedido in pedidos">
+            <div class="col col-75" ng-click="doClickVisualizarItemHistorico(produto)">{{pedido.datapedido}} </div>
+            <div class="col" ng-click="doClickVisualizarItemHistorico(produto)">{{pedido.status}}</div>
+        </div>
+        
+    </ion-content>
+
+</ion-view>

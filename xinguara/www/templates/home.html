@@ -1,0 +1,202 @@
+<ion-view view-title="Xinguara">
+
+    <ion-header-bar class="bar-positive item-input-inset">
+        <button class="button button-icon ion-android-menu" ng-click="toggleSideMenu()">
+        </button>
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Digite aqui sua pesquisa...">
+        </label>
+        <button class="button button-icon ion-ios-search" ng-click="doClickPesquisar()">
+        </button>
+    </ion-header-bar>
+
+    <ion-content scroll="false">
+        <tab-slide-box>
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp">
+                    <ion-scroll direction="x" class="tsb-hscroll">
+                        <a href="javascript:;" class="{{tab.icon}}" ng-repeat="tab in tabs" on-finish-render="test()">{{tab.text}}</a>
+                    </ion-scroll>
+                </div>
+            </div>
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index); logui($index)">
+                
+                <!-- TODOS -->
+                <ion-slide>
+                    <ion-content class="has-header">
+                        <div class="list card" ng-repeat="produto in produtos" ng-click="addItem(produto, 'traseiro')">
+
+                            <div class="item">
+                                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                                <p class="text-left">Valor por kg</p>
+                                <p class="text-left">{{produto.status}}</p>
+                                <p class="text-right text-red"><b>{{produto.precoCaixa}}</b> </p>
+                            </div>
+
+                            <div class="item item-body">
+                                <img class="full-image zima-img-50" src="img/carne.webp">
+                                <p>
+                                    <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+                                </p>
+                            </div>
+
+                        </div>
+                    </ion-content>
+                </ion-slide>
+                
+                <!-- PROMOÇÕES -->
+                <ion-slide>
+                    <ion-content class="has-header">
+                        <div class="list card" ng-repeat="produto in produtos" ng-click="addItem(produto, 'traseiro')">
+
+                            <div class="item">
+                                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                                <p class="text-left">Valor por kg</p>
+                                <p class="text-left">{{produto.status}}</p>
+                                <p class="text-right text-red"><b>{{produto.precoCaixa}}</b> </p>
+                            </div>
+
+                            <div class="item item-body">
+                                <img class="full-image zima-img-50" src="img/carne.webp">
+                                <p>
+                                    <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+                                </p>
+                            </div>
+
+                        </div>
+                    </ion-content>
+                </ion-slide>
+                
+                <!-- SANTA GULA -->
+                <ion-slide>
+                    <ion-content class="has-header">
+                        <div class="list card" ng-repeat="produto in produtos" ng-click="addItem(produto, 'traseiro')">
+
+                            <div class="item">
+                                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                                <p class="text-left">Valor por kg</p>
+                                <p class="text-left">{{produto.status}}</p>
+                                <p class="text-right text-red"><b>{{produto.precoCaixa}}</b> </p>
+                            </div>
+
+                            <div class="item item-body">
+                                <img class="full-image zima-img-50" src="img/carne.webp">
+                                <p>
+                                    <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+                                </p>
+                            </div>
+
+                        </div>
+                    </ion-content>
+                </ion-slide>
+                
+                <!-- TRASEIRO --> 
+                <ion-slide>
+                    <ion-content class="has-header">
+                        <div class="list card" ng-repeat="produto in produtos" ng-click="addItem(produto, 'traseiro')">
+
+                            <div class="item">
+                                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                                <p class="text-left">Valor por kg</p>
+                                <p class="text-left">{{produto.status}}</p>
+                                <p class="text-right text-red"><b>{{produto.precoCaixa}}</b> </p>
+                            </div>
+
+                            <div class="item item-body">
+                                <img class="full-image zima-img-50" src="img/carne.webp">
+                                <p>
+                                    <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+                                </p>
+                            </div>
+
+                        </div>
+                    </ion-content>
+                </ion-slide>
+                
+                <!-- DIANTEIRO -->
+                <ion-slide>
+                    <ion-content class="has-header">
+                        <div class="list card" ng-repeat="produto in produtos" ng-click="addItem(produto, 'traseiro')">
+
+                            <div class="item">
+                                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                                <p class="text-left">Valor por kg</p>
+                                <p class="text-left">{{produto.status}}</p>
+                                <p class="text-right text-red"><b>{{produto.precoCaixa}}</b> </p>
+                            </div>
+
+                            <div class="item item-body">
+                                <img class="full-image zima-img-50" src="img/carne.webp">
+                                <p>
+                                    <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+                                </p>
+                            </div>
+
+                        </div>
+                    </ion-content>
+                </ion-slide>
+                
+                <!-- MIÚDO -->
+                <ion-slide>
+                    <ion-content class="has-header">
+                        <div class="list card" ng-repeat="produto in produtos" ng-click="addItem(produto, 'traseiro')">
+
+                            <div class="item">
+                                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                                <p class="text-left">Valor por kg</p>
+                                <p class="text-left">{{produto.status}}</p>
+                                <p class="text-right text-red"><b>{{produto.precoCaixa}}</b> </p>
+                            </div>
+
+                            <div class="item item-body">
+                                <img class="full-image zima-img-50" src="img/carne.webp">
+                                <p>
+                                    <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+                                </p>
+                            </div>
+
+                        </div>
+                    </ion-content>
+                </ion-slide>
+                
+                <!-- SUBPRODUTOS -->
+                <ion-slide>
+                    <ion-content class="has-header">
+                        <div class="list card" ng-repeat="produto in produtos" ng-click="addItem(produto, 'traseiro')">
+
+                            <div class="item">
+                                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                                <p class="text-left">Valor por kg</p>
+                                <p class="text-left">{{produto.status}}</p>
+                                <p class="text-right text-red"><b>{{produto.precoCaixa}}</b> </p>
+                            </div>
+
+                            <div class="item item-body">
+                                <img class="full-image zima-img-50" src="img/carne.webp">
+                                <p>
+                                    <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+                                </p>
+                            </div>
+
+                        </div>
+                    </ion-content>
+                </ion-slide>
+            </ion-slide-box>
+            
+        </tab-slide-box>
+    </ion-content>
+
+    <!-- BOTÃO CARRINHO -->
+    <div class="button float-button positive badge1" ng-click="doClickAbrirCarrinho()" data-badge="33">
+        <span class="button__badge" ng-if="hasItens()">{{countItens()}}</span>
+        <span class="height-fix">
+            <a class="content positive">
+                <i class="ion-ios-cart"> </i>
+
+            </a>
+        </span>
+    </div>
+    <!-- BOTÃO CARRINHO -->
+
+</ion-view>

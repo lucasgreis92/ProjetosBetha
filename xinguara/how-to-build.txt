@@ -1,0 +1,10 @@
+#1
+https://forum.ionicframework.com/t/ionic-toturial-for-building-a-release-apk/15758/9
+
+Isso gera um unsiged.apk
+
+#2
+https://ionicframework.com/docs/guide/publishing.html
+Digitar no cmd (como adm): jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore BabyPandaApp.keystore BabyPandaAppUNSIGNED.apk BabyPandaApp
+
+Depois precisamos assinar o .apk

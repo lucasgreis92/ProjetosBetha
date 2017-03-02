@@ -1,0 +1,65 @@
+<ion-view cache-view="false">
+    <ion-header-bar class="bar-positive">
+        <button class="button icon ion-arrow-left-c button-clear" ng-click="goBack()"></button>
+        <h1 class="title">Adicionar Produto</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header">
+        <div class="list card">
+
+            <div class="item">
+                <h1 class="text-left h1-text-size-28">{{produto.nome}}</h1>
+                <p class="text-left">Valor por kg</p>
+                <p class="text-left">{{produto.status}}</p>
+            </div>
+
+            <div class="item item-body">
+                <!--<button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>-->
+
+                <div class="row">
+                    <div class="col col-50">Quantidade de caixas</div>
+                    <div class="col">
+                        <a class="button button-icon icon ion-minus-circled assertive" ng-click="decQtd()"></a>
+                    </div>
+                    <div class="col">
+                        <input class="item item-input"  type="number" min="1" max="9999" value="1" ng-model="produto.quantidade">
+                    </div>
+                    <div class="col">
+                        <a class="button button-icon icon ion-plus-circled balanced" ng-click="incQtd()"></a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-33 col-demo padding">
+                        Unidade/kg
+                        <p class="text-red">
+                            R$ {{produto.precoCaixa}}
+                        </p>
+                    </div>
+                    <div class="col col-33 col-demo padding">
+                        Peso
+                        <p class="text-red">
+                            {{produto.quantidade * produto.pesoCaixa}} kg
+                        </p>
+                    </div>
+                    <div class="col col-33 col-demo padding">
+                        Total
+                        <p class="text-red">
+                            R$ {{produto.quantidade * produto.precoCaixa}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button float-button positive badge1" ng-click="doClickAddProdutoCarrinho(produto)" data-badge="33">
+            <span class="height-fix">
+                <a class="content positive">
+                    <i class="ion-checkmark-round"> </i>
+                </a>
+            </span>
+        </div>
+        
+    </ion-content>
+</ion-view>

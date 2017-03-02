@@ -1,0 +1,7 @@
+[
+    {"id": 1, "categoria": "Santa Gula", "nome": "Caixa alcatra 15kg", "status": "Produto congelado", "pesoCaixa": "15", "unidadePeso": "kg"  ,"precoCaixa": "200.50", "precoKg": "20"},
+    {"id": 2, "categoria": "Santa Gula", "nome": "Caixa alcatra 15kg", "status": "Produto congelado", "pesoCaixa": "15", "unidadePeso": "kg"  ,"precoCaixa": "200.50", "precoKg": "20"},
+    {"id": 3, "categoria": "Santa Gula", "nome": "Caixa alcatra 15kg", "status": "Produto congelado","pesoCaixa": "15", "unidadePeso": "kg"  ,"precoCaixa": "200.50", "precoKg": "20"},
+    {"id": 4, "categoria": "Santa Gula", "nome": "Caixa alcatra 15kg", "status": "Produto congelado","pesoCaixa": "15", "unidadePeso": "kg"  ,"precoCaixa": "200.50", "precoKg": "20"},
+    {"id": 5, "categoria": "Santa Gula", "nome": "Caixa alcatra 15kg", "status": "Produto congelado", "pesoCaixa": "15", "unidadePeso": "kg"  ,"precoCaixa": "200.50", "precoKg": "20"}
+]

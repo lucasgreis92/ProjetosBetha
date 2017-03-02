@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+    <head >
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <base href="/" />
+        <title>Compras</title>
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/efeitos.css" rel="stylesheet" type="text/css"/>
+        <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js" type="text/javascript"></script>
+        
+        <script src="js/main.js" type="text/javascript"></script>
+        
+        <script src="js/controllers/produtos-controller.js" type="text/javascript"></script>
+        <script src="js/controllers/produto-controller.js" type="text/javascript"></script>
+        <script src="js/controllers/carrinho-controller.js" type="text/javascript"></script>
+        
+        <script src="js/directives/minhas-diretivas.js" type="text/javascript"></script>
+        <script src="js/services/meus-servicos.js" type="text/javascript"></script>
+        
+        
+    </head>
+    <body>
+        <div class="container">
+            <ng-view></ng-view>
+        </div>
+    </body>
+</html>

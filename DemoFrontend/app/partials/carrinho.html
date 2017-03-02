@@ -1,0 +1,14 @@
+{{mensagem}}
+<div class="row" >
+    <div class="col-md-4">Descrição</div>
+    <div class="col-md-4">Quantidade</div>
+    <div class="col-md-4">Valor</div>
+</div>
+<div class="row" ng-repeat="produto in carrinho.listaItem">
+    <div class="col-md-4">{{produto.descricao}}</div>
+    <div class="col-md-4">{{produto.quantidade}}</div>
+    <div class="col-md-4">{{produto.quantidade * produto.valor}}</div>
+</div>
+<div class="col-md-4">Total: R$ {{total}}</div>
+<a class="btn btn-primary" href="/principal">Voltar</a>
+<a class="btn btn-primary" href="/principal" ng-click="enviarCarrinho()">Finalizar compra</a>

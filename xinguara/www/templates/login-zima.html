@@ -1,0 +1,23 @@
+<ion-view view-title="Xinguara" name="login-view" cache-view="false">
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Conectar</h1>
+    </ion-header-bar>
+
+    <ion-content class="padding">
+        
+        <form name="loginForm" id="loginForm">
+            <div class="list list-inset ">
+                <label class="item item-input">
+                    <input type="text" placeholder="E-mail" ng-model="login.email" class="padding">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Senha" ng-model="login.password">
+                </label>
+            </div>
+            <p><a href="#/tipo-conta" ng-click="createProspect()">Criar uma conta</a></p>
+            <p><a href="#/recuperar-senha">Esqueci minha senha</a></p>
+            <button class="button button-block button-positive icon-left ion-android-open" ng-click="doLogin(loginForm, login)">CONECTAR</button>
+        </form>
+        
+    </ion-content>
+</ion-view>

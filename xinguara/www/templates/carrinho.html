@@ -1,0 +1,69 @@
+<ion-view cache-view="false">
+    <ion-header-bar class="bar-positive">
+        <button class="button icon ion-arrow-left-c button-clear" ng-click="goBack()"></button>
+        <h1 class="title">Carrinho</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header has-footer padding">
+
+        <!-- CARRINHO COM ITENS -->
+        <div class="list card" ng-if="hasItens()">
+
+            <div class="item item-image logo-gradiente">
+                <img src="../img/logo_xinguara.png">
+            </div>
+
+        </div>
+
+        <div class="row" ng-if="hasItens()">
+            <div class="col col-75"><b>Item</b></div>
+            <div class="col"><b>Valor</b></div>
+        </div>
+        <div class="row" ng-repeat="produto in itens" ng-if="hasItens()">
+            <div class="col col-75" ng-click="doClickEditarItemCarrinho(produto)">{{produto.quantidade}}x {{produto.nome}}</div>
+            <div class="col" ng-click="doClickEditarItemCarrinho(produto)">R$ {{produto.quantidade * produto.precoCaixa}}</div>
+        </div>
+        <!-- CARRINHO COM ITENS -->
+
+        <!-- CARRINHO VAZIO -->
+        <div ng-if="!hasItens()">
+
+            <div class="list card">
+
+                <div class="item text-center item-text-wrap">
+                    <h1>Você ainda não adicionou nenhum item...</h1>
+                </div>
+
+                <div class="item item-body item-image">
+                    <img src="img/shopping-cart.svg" class="zima-img-50">
+                    <p>
+                        <!-- CARRINHO VAZIO -->
+                        <button class="button button-block button-calm icon-left ion-ios-undo-outline" ng-click="goBack()">IR PARA MOSTRUÁRIO</button>
+                        <!-- CARRINHO VAZIO -->
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!-- CARRINHO VAZIO -->
+        
+    </ion-content>
+
+    <!-- CARRINHO COM ITENS -->
+    <div class="bar bar-subfooter auto-height" ng-if="hasItens()">
+        <div class="row">
+            <div class="col col-33">Total: </div>
+            <div class="col col-33 col-offset-33">R$ {{totalPedido}}</div>
+        </div>
+    </div>
+
+    <div class="bar bar-footer" ng-if="hasItens()">
+        <div class="col">
+            <button class="button button-block button-balanced icon-left ion-ios-checkmark-outline" style="margin-top: -5px" ng-click="doClickConferirPedido()">
+                FINALIZAR COMPRA
+            </button>
+        </div>
+    </div>
+    <!-- CARRINHO COM ITENS -->
+
+</ion-view>

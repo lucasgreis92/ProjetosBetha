@@ -1,0 +1,134 @@
+<ion-view view-title="Perfil" name="perfil-view" cache-view="false">
+    <ion-pane>
+        <ion-header-bar class="bar bar-header bar-positive">
+            <button class="button icon ion-arrow-left-c button-clear" ng-click="goHome()"> </button>
+            <h1 class="title">{{title}}</h1>
+        </ion-header-bar>
+
+        <ion-tabs class="tabs-positive tabs-icon tabs-fullwidt">
+
+            <ion-tab icon-on="ion-ios-person" icon-off="ion-ios-person-outline" >
+                <ion-content class="zima-applyFooter padding"> 
+
+                    <div class="list">
+                        <ion-item class="item-profile">
+                            <div class="item-avatar">
+                                <img ng-src="{{user.photoURL}}" class="zima-img-avatar">
+                            </div>
+                        </ion-item>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Foto de perfil</b></span>
+                            <input type="file" ng-model="user.photo" id="photo"> 
+                       </label>
+
+                        <div ng-if="hasPhoto()">
+                            <div class="list card">
+                                <button class="button button-block item item-icon-left positive" id="removedoc" ng-click="removePhoto()">
+                                    <i class="icon ion-trash-a"></i>Remover foto do perfil
+                                </button>
+                            </div>
+                        </div>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Nome completo</b></span>
+                            <input type="text" placeholder="" ng-model="user.fullname" value="{{$scope.user.fullname}}" id="fullname">
+                        </label>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Apelido</b></span>
+                            <input type="text" placeholder="Como quer ser tratado(a)" ng-model="user.nickname" value="{{$scope.user.nickname}}" id="nickname">
+                        </label>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>E-mail principal</b></span>
+                            <input type="email" placeholder="" readonly="" value="{{$scope.user.emailone}}" id="emailone" ng-model="user.emailone">
+                        </label>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>E-mail alternativo</b></span>
+                            <input type="email" placeholder="" value="{{$scope.user.emailtwo}}" ng-model="user.emailtwo" id="emailtwo">
+                        </label>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Telefone (Whatsapp ou Telegram)</b></span>
+                            <input type="tel" placeholder="" value="{{$scope.user.celphone}}" ng-model="user.celphone" id="celphone">
+                        </label>            
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Data de nascimento</b></span>
+                            <input type="date" value="{{$scope.user.birthday}}" ng-model="user.birthday" id="birthday">
+                        </label>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Documento</b></span>
+                            <input type="file" ng-model="user.doc" id="doc">
+
+                        </label>
+
+                        <div ng-if="hasDoc()">
+                            <div class="list card">
+                                <div class="item item-image zima-img-50">
+                                    <img ng-src="{{user.docURL}}">
+                                </div>
+                                <button class="button button-block item item-icon-left positive" id="removedoc" ng-click="removeDoc()">
+                                    <i class="icon ion-trash-a"></i>Remover documento
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+                
+                <ion-footer-bar class="tabs">
+                    <button class="button button-block button-balanced icon-left ion-checkmark-round" ng-click="doClickSalvarUsuario(user)">
+                        SALVAR
+                    </button>
+                </ion-footer-bar>
+                
+            </ion-tab>
+
+            <ion-tab icon-on="ion-ios-location" icon-off="ion-ios-location-outline">
+                <ion-content class="padding zima-applyFooter has-footer">
+
+                    <div class="list">
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Endereço</b></span>
+                            <input type="text" placeholder="Rua/Av. das Flores" value="{{$scope.user.address}}" ng-model="user.address">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Número</b></span>
+                            <input type="number" placeholder="33" value="{{$scope.user.number}}" ng-model="user.number">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Complemento</b></span>
+                            <input type="text" placeholder="Edifício Schopenhauer, apto 704" value="{{$scope.user.addresscompl}}" ng-model="user.addresscompl">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>CEP</b></span>
+                            <input type="number" placeholder="88390000" value="{{$scope.user.zipcode}}" ng-model="user.zipcode">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Cidade</b></span>
+                            <input type="text" placeholder="Curitiba" value="{{$scope.user.city}}" ng-model="user.city">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>Estado</b></span>
+                            <input type="text" placeholder="Paraná" value="{{$scope.user.state}}" ng-model="user.state">
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label"><b>País</b></span>
+                            <input type="text" readonly="readonly" placeholder="Brasil" value="{{$scope.user.country}}" ng-model="user.country">
+                        </label>
+                    </div>
+
+                </ion-content>
+                <ion-footer-bar class="tabs"> 
+                    <button class="button button-block button-balanced icon-left ion-checkmark-round" ng-click="doClickSalvarUsuario(user)">
+                        SALVAR
+                    </button>
+                </ion-footer-bar>
+            </ion-tab>
+
+        </ion-tabs>
+    </ion-pane>
+</ion-view>

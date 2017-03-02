@@ -1,0 +1,31 @@
+<div class="item">
+    <h1 class="text-left h1-text-size-28">{{produto.descricao}}</h1>
+    <img class="img-responsive center-block col-md-6" src="{{produto.url}}">
+    <p class="text-left">Valor unitário: </p>
+    <p class="text-left">{{produto.valor}}</p>
+</div>
+
+<div class="col-md-4">
+    <div>Quantidade</div>
+    <div class="input-group">
+        <span class="input-group-btn">
+            <button class="btn btn-danger" ng-click="decQtd()">Decrementar</button>
+        </span>
+        <input class="item item-input col-md-2"  ng-model="produto.quantidade">    
+        <button class="btn btn-primary" ng-click="incQtd()">Incrementar</button>
+    </div>
+</div>
+<div class="col-md-4">
+    <div >
+        Total
+        <p class="text-red">
+            R$ {{produto.quantidade * produto.valor}}
+        </p>
+    </div>
+    <div class="input-group">
+        <span class="input-group-btn">
+            <a class="btn btn-danger" href="/produtos">Voltar</a>
+        </span>
+        <a class="btn btn-primary" href="/carrinho/new/{{produto.id}}/{{produto.quantidade}}">Confirmar</a>
+    </div>   
+</div>

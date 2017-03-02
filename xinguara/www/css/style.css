@@ -1,0 +1,316 @@
+/* Empty. Add your own CSS if you like */
+.bar.bar-profile {
+    background-color: #444;
+    height: 178px;
+}
+
+.bar .profile {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.profile .name {
+    color: #FFFFFF;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+.menu .has-header
+{
+    top: 169px;
+}
+
+/*LOGIN*/
+.login-container > .header {
+    -webkit-flex: 4;
+    padding-top: 20px;
+}
+
+.login-container > .button-row img {
+    max-width: 80%;
+}
+
+.zima-img {
+    width: 100%;
+    height: 100%;
+}
+
+.zima-img-avatar {
+    max-width: 100px !important;
+    max-height: 100px !important;
+    top: 2px !important;
+    left: 30% !important;
+}
+
+.zima-img-50 {
+    max-width: 30% !important;
+    max-height: 30% !important;
+}
+
+.zima-applyFooter{
+    margin-bottom: 44px !important;
+}
+
+/* SPLASH SCREEN */
+#custom-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #FFFFFF;
+}
+
+#custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    -webkit-animation: rotating-function 3.25s linear infinite;
+    -moz-animation: rotating-function 3.25s linear infinite;
+    -ms-animation: rotating-function 3.25s linear infinite;
+    -o-animation: rotating-function 3.25s linear infinite;
+    animation: rotating-function 3.25s linear infinite;
+}
+
+.custom-overlay  {
+}
+
+@-webkit-keyframes rotating-function {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotating-function {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes rotating-function {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotating-function {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating-function {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* SPLASH SCREEN */
+
+/* FLOATING BUTTON */
+.float-button {
+    background-color:#387ef5;
+    opacity: 0.9;
+    color: white;
+    border-radius: 50%;
+    /*border-radius:15% 0 0 0;*/
+    width: 30px;
+    padding: 25px;
+    font-size: 40px;
+    position: fixed;
+    bottom: 5%; /* Adjust height */
+    right: 5%; /* Adjust position */
+    z-index: 1000;
+    margin-bottom: 0.5em; /* Zima */
+}
+
+.float-button .height_fix {
+    margin-top: 100%;
+    border: 1px solid red;
+}
+
+.float-button .content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -20px;
+    color: white;
+}
+
+.button__badge {
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 3px;
+    font-size: 10px;
+    position: absolute; /* Position the badge within the relatively positioned button */
+    top: 1px;
+    right: 0;
+    height: 18px;
+    width: 18px;
+    line-height: 2;
+    vertical-align: text-top;
+    z-index: 9;
+}
+/* FLOATING BUTTON */
+
+/* Tabs dinâmicas: http://codepen.io/scruff009/pen/ByMqKd */
+.slider-slide h3{
+    color:#000;
+    margin-top:10px;
+}
+.scroll{
+    height:100%;
+}
+
+.tabbed-slidebox .tsb-icons:after{
+    display:none;
+}
+.tabbed-slidebox .slider {
+    height: 100%;
+}
+.tabbed-slidebox.btm .slider {
+    margin-bottom: -50px;
+}
+.tabbed-slidebox .slider-slides {
+    width: 100%;
+}
+
+.tabbed-slidebox .slider-slide {
+    padding-top: 0px;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+    /*background-color: #ef4e3a;*/
+    background-color: #fff;
+}
+
+.tabbed-slidebox .tsb-icons {
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+    background-color:#fff;
+}
+
+.tabbed-slidebox .tsb-ic-wrp {
+    display: flex;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.3s; /* For Safari 3.1 to 6.0 */
+    -webkit-transform:translate3d(0,0,0);
+}
+
+.tabbed-slidebox .tsb-icons a {
+    display: inline-block;
+    width: 54px;
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 0.3);
+    -webkit-transform:translate3d(0,8px,0);
+}
+
+.tabbed-slidebox .tsb-icons a.active {
+    color: rgba(56, 126, 245, 0.9);
+    font-size: 3.5em;
+    -webkit-transform:translate3d(0,0,0);
+}
+
+.tabbed-slidebox .tabbed-slidebox {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.tsb-hscroll.scroll-view{
+    white-space: nowrap;
+    margin:0 auto;
+}
+.tsb-hscroll.scroll-view .scroll-bar{
+    visibility:hidden;
+}
+.tsb-hscroll.scroll-view .scroll.onscroll{
+    -webkit-transition: -webkit-transform 0.3s; /* For Safari 3.1 to 6.0 */
+}
+
+.tabbed-slidebox .tsb-icons .scroll a{
+    width:auto;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-decoration: none;
+    margin: 0 15px;
+    border-bottom: 3px solid transparent;
+}
+
+/* under line*/
+.tabbed-slidebox .tsb-icons .scroll a.active {
+    font-size: 1.8em;
+    border-bottom: 3px solid #ccc;
+}
+/* Tabs dinâmicas: http://codepen.io/scruff009/pen/ByMqKd */
+
+.text-red {
+    color: #ef473a !important;
+}
+
+.h1-text-size-28 {
+    font-size: 28px;
+}
+
+.col-demo {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.logo-gradiente {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(56,117,151,1), rgba(8,87,129,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(56,117,151,1), rgba(8,87,129,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(56,117,151,1), rgba(8,87,129,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(56,117,151,1), rgba(8,87,129,0)); /* Standard syntax */
+}
+
+.logo-gradiente2 {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, red, yellow); /* Standard syntax */
+}

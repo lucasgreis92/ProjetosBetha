@@ -1,0 +1,47 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <button class="button icon ion-arrow-left-c button-clear" ng-click="goBack()"></button>
+        <h1 class="title">Filtros</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <ion-list>
+
+            <ion-checkbox ng-model="filter.red">Red</ion-checkbox>
+            <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+            <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+
+            <ul class="list">
+
+                <li class="item item-toggle">
+                    HTML5
+                    <label class="toggle toggle-energized">
+                        <input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle">
+                    CSS
+                    <label class="toggle toggle-assertive">
+                        <input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+                <li class="item item-toggle">
+                    JS
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+
+            </ul>
+        </ion-list>
+    </ion-content>
+</ion-view>

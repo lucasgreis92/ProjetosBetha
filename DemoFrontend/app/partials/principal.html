@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <h1 class="text-center">Compras</h1>
+</div>
+
+<p ng-show="mensagem.length" class="alert alert-info">
+    {{mensagem}}
+</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <form>
+            <div >
+                <input class="form-control" placeholder="filtrar pelo título do produto" 
+                       ng-model="filtro" ng-model-options="{ debounce: 500 }">
+            </div> 
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <meu-painel class="col-md-2" ng-repeat="produto in produtos| filter: filtro" 
+                descricao="{{produto.descricao}}" 
+                url="{{produto.url}}" 
+                complemento="{{produto.complemento}}"
+                valor="{{produto.valor}}"
+                alt="{{produto.descricao}}">
+        <a class="btn btn-primary btn-block" href="/add-item/{{produto.id}}">
+            Add no carrinho
+        </a>
+    </meu-painel>
+
+</div>

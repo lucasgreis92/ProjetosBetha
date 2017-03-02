@@ -1,0 +1,29 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <button class="button icon ion-arrow-left-c button-clear" ></button>
+        <h1 class="title">Filtros</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="list card" ng-repeat="produto in produtos">
+
+            <div class="item item-avatar">
+                <h2>{{produto.categoria}}</h2>
+                <p>{{produto.nome}}</p>
+            </div>
+
+            <div class="item item-body">
+                <img class="full-image zima-img-50" src="img/carne.webp">
+                <p>
+                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                    the content is from a card-body consisting of an image and paragraph text. The footer
+                    consists of tabs, icons aligned left, within the card-footer.
+                </p>
+                <p>
+                    <button class="button button-block button-balanced icon-left ion-ios-plus-outline">ADICIONAR AO CARRINHO</button>
+                </p>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

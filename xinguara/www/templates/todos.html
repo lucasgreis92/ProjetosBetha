@@ -1,0 +1,26 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <button class="button icon ion-arrow-left-c button-clear" ></button>
+        <h1 class="title">Filtros</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header">
+        <div class="list card" ng-repeat="produto in produtos">
+
+            <div class="item">
+                <h1>{{produto.categoria}}</h1>
+                <p><b>{{produto.nome}} Caixa:</b> {{produto.caixa}}</p>
+                <p><b>Preço em Kg:</b> {{produto.precoKg}}</p>
+                <p class="text-right"><b>Total caixa:</b> {{produto.precoCaixa}}</p>
+            </div>
+
+            <div class="item item-body">
+                <img class="full-image zima-img-50" src="img/carne.webp">
+                <p>
+                    <button class="button button-block button-balanced icon-left ion-ios-plus-outline" ng-click="addItemCart(produto)">ADICIONAR AO CARRINHO</button>
+                </p>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
